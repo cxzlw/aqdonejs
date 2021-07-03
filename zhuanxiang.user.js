@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         安全教育平台专项作业一键完成脚本 by cxzlw
 // @namespace    https://github.com/cxzlw
-// @version      1.0
+// @version      2.01b
 // @description  由创新者老王制作用于在点击问题回答提交时破解问题校验程序的小脚本
 // @author       https://github.com/cxzlw
 // @match        https://huodong.xueanquan.com/*/*.html*
