@@ -16,5 +16,39 @@
 (function() {
     'use strict';
     console.log("安全教育平台专项作业一键完成脚本 by cxzlw: 脚本已加载");
-    questionMust = function(){console.log("安全教育平台专项作业一键完成脚本 by cxzlw: 已成功拦截了一次完整性检测");return true;}
+questionMust = function() {
+    var qNum = 0;
+    var aNum = 0;
+    var tishiContent = "";
+    $('.test_question dl').each(function () {
+        if ($(this).is(":visible")) {
+            if ($(this).find('[type="radio"]').length > 0 || $(this).find('[type="checkbox"]').length > 0) {
+                qNum++;
+            }
+            //获取哪几道题未答
+            var radioNum = $(this).find('[type="radio"]').length;
+            var noAnswerNum = 0;
+            $(this).find('[type="radio"]').each(function () {
+                if ($(this).prop('checked') == false) {
+                    noAnswerNum++;
+                }
+            });
+            if (radioNum == noAnswerNum && radioNum > 0) {
+                //tishiContent += qNum + "、";
+                
+                var id = $(this).attr("id").substring(1);
+                
+                r = $(this).find('[type="radio"]');
+                nid = r.length-1;
+                if (nid > 2){
+                    nid = 2;
+                }
+                r[nid] . checked = true;
+                choose(id,r[nid],0)
+            }
+        }
+    });
+    
+    return true;
+};
 })();
