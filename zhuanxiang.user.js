@@ -41,8 +41,8 @@ questionMust = function() {
                 if (nid > 2){
                     nid = 2;
                 }
-                r[nid] . checked = true;
-                choose(id,r[nid],0)
+                r[nid].click();
+                choose(id,r[nid],0);
             }
         }
     });
