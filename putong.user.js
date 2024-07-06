@@ -16,7 +16,7 @@
 
 (function() {
     'use strict';
-    // Fuck you ShaBi Xueanquan. 
+    // **REMOVED**. 
     console.log("安全教育平台普通作业一键完成脚本 by cxzlw: 脚本已加载");
     $('#input_button').click(function () {
         console.log('安全教育平台普通作业一键完成脚本 by cxzlw: 成功的拦截了问题校验,祝你有一个美好的未来😊');
